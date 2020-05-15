@@ -1,0 +1,133 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redis客户端 - WebRedis系统</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/AdminLTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/AdminLTE/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/AdminLTE/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminLTE/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="~/AdminLTE/dist/css/skins/_all-skins.min.css">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body class="hold-transition skin-blue sidebar-mini fixed">
+    @*<mini-profiler />*@
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>WRS</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>WebRedis</b>系统</span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- 用户信息菜单 -->
+                        <li class="user user-menu">
+                            <!-- 注销切换按钮 -->
+                            <a href="javascript:void(0);">
+                                <!-- 用户头像-->
+                                <i class="fa fa-user"></i>
+                                <!-- 小设备浏览模式下隐藏名称. -->
+                                <span class="hidden-xs">蒋海波</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a id="btn-loginout" href="javascript:void(0);"><i class="fa fa-power-off"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <section class="sidebar" style="overflow: hidden; width: auto; height: 468px;">
+                <div id="menu-header" title="主菜单">
+                    <i class="fa fa-desktop"></i>
+                    <strong>主菜单</strong>
+                </div>
+                <ul class="sidebar-menu tree" data-widget="tree">
+                </ul>
+                <div class="treemenu-loading" style="display: none;"></div>
+            </section>
+        </aside>
+
+        <!-- 内容区域 -->
+        <div class="content-wrapper">
+            <div style="padding-top:2px; padding-left:2px">
+                <div class="nav-tabs-custom">
+                    <ul class="nav nav-tabs">
+                        <li class="pull-right"><a id="btn-reload" href="javascript:void(0);" class="text-blue" title="刷新"><i class="fa fa-refresh"></i></a></li>
+                        <li class="active"><a href="#tab_home" data-toggle="tab" aria-expanded="true"><i class="fa fa-home copter-menu-icon"></i>欢迎页</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab_home">
+                            <iframe src="/home/welcome" class="tab-pane-iframe"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容区域 -->
+    </div>
+
+    <!-- alert提示 -->
+    <div id="sys-alert" class="modal modal-primary fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title"><i class="fa fa-info"></i>操作提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ./wrapper -->
+    <script src="~/AdminLTE/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="~/AdminLTE/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="~/AdminLTE/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/AdminLTE/bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/AdminLTE/dist/js/adminlte.min.js"></script>
+    <script src="~/js/adminlte.tree.js"></script>
+    <script src="~/js/site.js"></script>
+    <script>
+        window._liteTreeUrl = '/redis/databases';
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,46 @@
+﻿#menu-header {
+    color: #ffffff;
+    background: #1a2226;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    padding: 10px 25px 10px 15px;
+    font-size: 12px;
+}
+.sidebar-mini.sidebar-collapse #menu-header {
+    display: none !important;
+}
+.treemenu-loading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: url(../adminlte/dist/img/loading.gif) no-repeat center;
+    display: none;
+}
+.sidebar-menu li.menu-open > a .fa-angle-double-left {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: transform .3s;
+}
+
+/**********Tab - Tab标签**********/
+.nav-tabs-custom {margin: 0;border-radius: 0;box-shadow: none; background-color:inherit}
+.nav-tabs-custom > .tab-content {padding: 0; border-left:1px solid #d2d2d2}
+.nav-tabs-custom > .tab-content .tab-pane {height: 100%;}
+.nav-tabs-custom > .tab-content .tab-pane .tab-pane-iframe {border: none;height: 100%;width: 100%;display: block;}
+.nav-tabs-custom > .nav-tabs .fa.copter-menu-icon{margin-right:5px}
+.nav-tabs-custom > .nav-tabs .fa.copter-menu-close{margin-left:5px}
+.nav-tabs-custom > .nav-tabs > li{margin-bottom: -1px; border-top: 2px solid transparent}
+.nav-tabs-custom > .nav-tabs > li.active > a, .nav-tabs-custom > .nav-tabs > li.active:hover > a{ color: #000}
+.nav-tabs-custom > .nav-tabs > li.active > a{ border-right-color: #d2d2d2; border-left-color: #d2d2d2; background-color:#fff}
+.nav-tabs-custom > .nav-tabs > li:hover{ border-top-color: #3c8dbc }
+.nav-tabs-custom > .nav-tabs > li:hover > a:hover { border-top-color: transparent; border-left-color: #d2d2d2; border-right-color: #d2d2d2;background-color: #fff; color:#000 }
+.nav-tabs-custom > .nav-tabs > li.pull-right{border:none}
+.nav-tabs-custom > .nav-tabs > li.pull-right:hover{border-top:1px solid #d2d2d2 }
+.nav-tabs-custom > .nav-tabs{ border-bottom: 1px solid #d2d2d2}
+
+#sys-ajax-loading {position: fixed;z-index: 1000;left: 6px;top: 6px;display: none;padding: 7px 10px 7px 10px;}

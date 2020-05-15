@@ -1,0 +1,9 @@
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\bin\Debug\netcoreapp3.1\WebRedis.Infrastructure.deps.json
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\bin\Debug\netcoreapp3.1\WebRedis.Infrastructure.dll
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.AssemblyInfoInputs.cache
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.AssemblyInfo.cs
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\bin\Debug\netcoreapp3.1\WebRedis.Infrastructure.pdb
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.dll
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.pdb
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.csproj.CoreCompileInputs.cache
+E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.csprojAssemblyReference.cache
