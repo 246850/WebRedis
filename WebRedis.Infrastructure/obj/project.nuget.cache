@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c++S8QQ6+PXRkCbnEycxC7JM2RtsYrN/Lg3PdA0fEAwfJ4zjMQbgrfy4SOqNvMb0nSBdf1dzz3fg11wWQd282Q==",
+  "dgSpecHash": "U86vYeJxEDgnW3VuIoeCE+o8026uKLoIS497L2+fdA3/EqZ2xOoG6RlnWjch5QX4vzGiP0/9BDAm04MJNwUqmA==",
   "success": true,
-  "projectFilePath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj",
+  "projectFilePath": "E:\\git_spaces\\WebRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

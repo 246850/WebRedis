@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IPbOINXhsUoev3ZkH+Qwe04pLPP3ZDQPVfd18nXWbcEJ7zITQX0Io+T4yBrPYOIAJZfv3yulavaIUwgD+FZzcQ==",
+  "dgSpecHash": "jlpNe5N2qG8dXYAPP00Ot+QbzQGyJdoNBdkXbriTUbpnMLcC0/VWCX1myIfsfqkZYfLfdWoEdv/aByqxnOjtLA==",
   "success": true,
-  "projectFilePath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Models\\WebRedis.Models.csproj",
+  "projectFilePath": "E:\\git_spaces\\WebRedis\\WebRedis.Models\\WebRedis.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],

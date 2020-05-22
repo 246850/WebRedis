@@ -7865,11 +7865,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Web\\WebRedis.Web.csproj",
+      "projectUniqueName": "E:\\git_spaces\\WebRedis\\WebRedis.Web\\WebRedis.Web.csproj",
       "projectName": "WebRedis.Web",
-      "projectPath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Web\\WebRedis.Web.csproj",
+      "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Web\\WebRedis.Web.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Web\\obj\\",
+      "outputPath": "E:\\git_spaces\\WebRedis\\WebRedis.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7885,11 +7885,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj": {
-              "projectPath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj"
+            "E:\\git_spaces\\WebRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj": {
+              "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj"
             },
-            "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Models\\WebRedis.Models.csproj": {
-              "projectPath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Models\\WebRedis.Models.csproj"
+            "E:\\git_spaces\\WebRedis\\WebRedis.Models\\WebRedis.Models.csproj": {
+              "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Models\\WebRedis.Models.csproj"
             }
           }
         }

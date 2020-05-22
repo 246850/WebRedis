@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Models\\WebRedis.Models.csproj",
+      "projectUniqueName": "E:\\git_spaces\\WebRedis\\WebRedis.Models\\WebRedis.Models.csproj",
       "projectName": "WebRedis.Models",
-      "projectPath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Models\\WebRedis.Models.csproj",
+      "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Models\\WebRedis.Models.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\DEMO_SPACES\\AspNetCoreRedis\\WebRedis.Models\\obj\\",
+      "outputPath": "E:\\git_spaces\\WebRedis\\WebRedis.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
