@@ -19,7 +19,7 @@ namespace WebRedis.Infrastructure
         public async Task Invoke(HttpContext context)
         {
             // 执行前 设置 Redis 连接
-            IConnectionMultiplexer connection = ConnectionMultiplexer.Connect("172.16.10.246:6379");
+            IConnectionMultiplexer connection = ConnectionMultiplexer.Connect("101.132.140.8:6379");
             context.Items[ConstantKey.RedisConnectionKey] = connection;
             try
             {

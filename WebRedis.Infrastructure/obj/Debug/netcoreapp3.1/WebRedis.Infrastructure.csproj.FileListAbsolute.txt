@@ -15,3 +15,4 @@ E:\git_spaces\WebRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.
 E:\git_spaces\WebRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.csproj.CoreCompileInputs.cache
 E:\git_spaces\WebRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.dll
 E:\git_spaces\WebRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.pdb
+E:\git_spaces\WebRedis\WebRedis.Infrastructure\obj\Debug\netcoreapp3.1\WebRedis.Infrastructure.csprojAssemblyReference.cache

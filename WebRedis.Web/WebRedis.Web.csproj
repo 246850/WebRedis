@@ -1146,15 +1146,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\WebRedis.Infrastructure\WebRedis.Infrastructure.csproj" />
-    <ProjectReference Include="..\WebRedis.Models\WebRedis.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\AdminLTE\bower_components\bootstrap\CHANGELOG.md" />
     <None Include="wwwroot\AdminLTE\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
     <None Include="wwwroot\AdminLTE\bower_components\bootstrap\dist\css\bootstrap-theme.min.css.map" />
@@ -2695,6 +2686,15 @@
     <None Include="wwwroot\AdminLTE\bower_components\select2\tests\vendor\jquery-2.2.4.js" />
     <None Include="wwwroot\AdminLTE\bower_components\select2\tests\vendor\jquery-3.4.1.js" />
     <None Include="wwwroot\AdminLTE\bower_components\select2\tests\vendor\qunit-1.23.1.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebRedis.Infrastructure\WebRedis.Infrastructure.csproj" />
+    <ProjectReference Include="..\WebRedis.Models\WebRedis.Models.csproj" />
   </ItemGroup>
 
 </Project>
