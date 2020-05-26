@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <button type="button" class="btn btn-danger btn-flat"><i class="fa fa-trash"></i>删除</button>
+                    <button type="button" class="btn btn-danger btn-flat" onclick="doDelete()"><i class="fa fa-trash"></i>删除</button>
                 </div>
             </div>
         </div>
@@ -59,6 +59,16 @@
             $("#old_key").val($("#@Html.IdFor(model=> model.Key)").val());
             parent.$.alert("成功");
             loading = false;
+        });
+    }
+    function doDelete() {
+        if (loading) return false;
+        loading = true;
+
+        $.post("/redis/keydelete", { database:@Model.Database, key: encodeURIComponent($("#old_key").val()) }, function (res) {
+            parent.$.alert("成功");
+            loading = false;
+            doQuery();
         });
     }
     $(function () {

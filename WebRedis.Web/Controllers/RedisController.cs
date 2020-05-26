@@ -102,7 +102,7 @@ namespace WebRedis.Web.Controllers
         /// 删除 Key
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpPost]
         public async Task KeyDelete(int database, string key)
         {
             IDatabase db = _connection.GetDatabase(database);
