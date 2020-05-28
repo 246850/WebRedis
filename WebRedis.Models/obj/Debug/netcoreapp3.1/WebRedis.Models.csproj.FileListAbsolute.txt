@@ -7,12 +7,3 @@ E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.
 E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.csproj.CoreCompileInputs.cache
 E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.dll
 E:\DEMO_SPACES\AspNetCoreRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.pdb
-E:\git_spaces\WebRedis\WebRedis.Models\bin\Debug\netcoreapp3.1\WebRedis.Models.deps.json
-E:\git_spaces\WebRedis\WebRedis.Models\bin\Debug\netcoreapp3.1\WebRedis.Models.dll
-E:\git_spaces\WebRedis\WebRedis.Models\bin\Debug\netcoreapp3.1\WebRedis.Models.pdb
-E:\git_spaces\WebRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.AssemblyInfoInputs.cache
-E:\git_spaces\WebRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.AssemblyInfo.cs
-E:\git_spaces\WebRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.csproj.CoreCompileInputs.cache
-E:\git_spaces\WebRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.dll
-E:\git_spaces\WebRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.pdb
-E:\git_spaces\WebRedis\WebRedis.Models\obj\Debug\netcoreapp3.1\WebRedis.Models.csprojAssemblyReference.cache
