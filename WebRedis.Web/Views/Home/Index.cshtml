@@ -1,5 +1,6 @@
 ﻿@{
     Layout = null;
+    List<ConnectionConfigModel> databases = ViewBag.databases as List<ConnectionConfigModel>;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -66,9 +67,15 @@
         <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
             <section class="sidebar" style="overflow: hidden; width: auto; height: 468px;">
-                <div id="menu-header" title="主菜单">
-                    <i class="fa fa-desktop"></i>
-                    <strong>主菜单</strong>
+                <div id="menu-header" title="切换会话">
+                    @*<i class="fa fa-desktop"></i>
+                    <strong>切换会话</strong>*@
+                    <select id="database_change" class="form-control">
+                        @foreach (var item in databases)
+                        {
+                        <option value="@item.Id" title="@string.Format("{0}:{1}", item.IpAddress, item.Port)">@item.Name</option>
+                        }
+                    </select>
                 </div>
                 <ul class="sidebar-menu tree" data-widget="tree">
                 </ul>
@@ -82,11 +89,11 @@
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="pull-right"><a id="btn-reload" href="javascript:void(0);" class="text-blue" title="刷新"><i class="fa fa-refresh"></i></a></li>
-                        <li class="active"><a href="#tab_home" data-toggle="tab" aria-expanded="true"><i class="fa fa-home copter-menu-icon"></i>欢迎页</a></li>
+                        <li class="active"><a href="#tab_home" data-toggle="tab" aria-expanded="true"><i class="fa fa-home copter-menu-icon"></i>会话管理</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab_home">
-                            <iframe src="/home/welcome" class="tab-pane-iframe"></iframe>
+                            <iframe src="/home/connections" class="tab-pane-iframe"></iframe>
                         </div>
                     </div>
                 </div>
@@ -125,8 +132,25 @@
     <script src="~/AdminLTE/dist/js/adminlte.min.js"></script>
     <script src="~/js/adminlte.tree.js"></script>
     <script src="~/js/site.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
-        window._liteTreeUrl = '/redis/databases';
+        if ($("#database_change").find("option").length > 0) {
+            window._liteTreeUrl = '/redis/databases';
+
+            $("#database_change").on("change", function () {
+                var database = $(this).val();
+                $.cookie('database', database, { expires: 365 });
+                window.location.reload();
+            });
+            if (!$.cookie('database')) {
+                $("#database_change").trigger("change");
+            } else {
+                $("#database_change").val($.cookie('database'));
+            }
+        } else {
+            $.alert("请先配置Redis会话，已配置可刷新重试");
+        }
+
     </script>
 </body>
 </html>

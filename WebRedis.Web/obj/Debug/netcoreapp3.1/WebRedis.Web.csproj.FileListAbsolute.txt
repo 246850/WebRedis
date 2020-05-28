@@ -248,3 +248,13 @@ E:\git_spaces\WebRedis\WebRedis.Web\obj\Debug\netcoreapp3.1\staticwebassets\WebR
 E:\git_spaces\WebRedis\WebRedis.Web\obj\Debug\netcoreapp3.1\WebRedis.Web.dll
 E:\git_spaces\WebRedis\WebRedis.Web\obj\Debug\netcoreapp3.1\WebRedis.Web.pdb
 E:\git_spaces\WebRedis\WebRedis.Web\obj\Debug\netcoreapp3.1\WebRedis.Web.genruntimeconfig.cache
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\WebRedis.Domain.dll
+E:\git_spaces\WebRedis\WebRedis.Web\bin\Debug\netcoreapp3.1\WebRedis.Domain.pdb
+E:\git_spaces\WebRedis\WebRedis.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Connections.cshtml.g.cs

@@ -4,6 +4,70 @@
     "E:\\git_spaces\\WebRedis\\WebRedis.Web\\WebRedis.Web.csproj": {}
   },
   "projects": {
+    "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\WebRedis.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\WebRedis.Domain.csproj",
+        "projectName": "WebRedis.Domain",
+        "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\WebRedis.Domain.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://www.nuget.org/api/v2/": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.3.20216.6\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\git_spaces\\WebRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +90,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\WebRedis.Domain.csproj": {
+                "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\WebRedis.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -161,6 +229,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\WebRedis.Domain.csproj": {
+                "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Domain\\WebRedis.Domain.csproj"
+              },
               "E:\\git_spaces\\WebRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj": {
                 "projectPath": "E:\\git_spaces\\WebRedis\\WebRedis.Infrastructure\\WebRedis.Infrastructure.csproj"
               },
@@ -181,7 +252,11 @@
           "dependencies": {
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [

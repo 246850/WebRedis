@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebRedis.Infrastructure", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebRedis.Models", "WebRedis.Models\WebRedis.Models.csproj", "{C959910A-B9FE-43DA-8C68-5F84FBC6BBAD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRedis.Domain", "WebRedis.Domain\WebRedis.Domain.csproj", "{6C9D76BF-3054-419C-94D9-DA0923FE3BA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C959910A-B9FE-43DA-8C68-5F84FBC6BBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C959910A-B9FE-43DA-8C68-5F84FBC6BBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C959910A-B9FE-43DA-8C68-5F84FBC6BBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C9D76BF-3054-419C-94D9-DA0923FE3BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9D76BF-3054-419C-94D9-DA0923FE3BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9D76BF-3054-419C-94D9-DA0923FE3BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9D76BF-3054-419C-94D9-DA0923FE3BA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

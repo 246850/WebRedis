@@ -8,9 +8,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Pomelo.EntityFrameworkCore.MySql.Storage;
+using WebRedis.Domain;
 using WebRedis.Infrastructure;
 
 namespace WebRedis.Web
@@ -39,6 +42,14 @@ namespace WebRedis.Web
 #endif
 
             });
+
+            services.AddDbContext<WebredisContext>(options =>
+            {
+                options.UseMySql(Configuration.GetConnectionString("MySQL"), mysql =>
+                {
+                    mysql.CharSet(CharSet.Utf8Mb4);
+                });
+            }); // EF Core DbContext
 
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.All));// 解决中文乱码
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

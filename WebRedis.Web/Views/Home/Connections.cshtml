@@ -1,0 +1,117 @@
+﻿@model ConnectionConfigModel
+@{
+    ViewData["Title"] = "会话管理";
+}
+<style>
+    .form-horizontal .control-label {
+        text-align: left;
+    }
+</style>
+<div class="row">
+    <div class="col-md-7">
+        <table id="grid_0"></table>
+    </div>
+    <div class="col-md-5">
+        <form class="form-horizontal" method="post" action="/home/add">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">添加</h3>
+                </div>
+                <div class="box-body">
+                    <div class="form-group">
+                        @Html.HiddenFor(model => model.Id)
+                        <label for="@Html.IdFor(model=> model.Name)" class="col-sm-2 control-label">名称</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Name" required="required" type="text" value="" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="@Html.IdFor(model=> model.IpAddress)" class="col-sm-2 control-label">地址</label>
+                        <div class="col-sm-10">
+                            <input asp-for="IpAddress" required="required" type="text" value="" class="form-control" placeholder="127.0.0.1">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="@Html.IdFor(model=> model.Port)" class="col-sm-2 control-label">端口</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Port" required="required" type="number" value="6379" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="@Html.IdFor(model=> model.Password)" class="col-sm-2 control-label">密码</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Password" type="text" value="" class="form-control" placeholder="可选">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="@Html.IdFor(model=> model.Description)" class="col-sm-2 control-label">备注</label>
+                        <div class="col-sm-10">
+                            <textarea asp-for="Description" class="form-control" rows="5" placeholder="可选"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-success btn-flat btn-sm"><i class="fa fa-check"></i>保存</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            /**表格**/
+            $("#grid_0").kendoGrid({
+                dataSource: {
+                    transport: {
+                        type: "json",
+                        read: {
+                            url: '/home/connections',
+                            type: "post"
+                        }
+                    },
+                    serverPaging: true,
+                    serverFiltering: true,
+                    serverSorting: true,
+                    schema: {
+                        data: "body.list",
+                        total: "body.total",
+                        model: {
+                            "id": "id"
+                        }
+                    }
+                },
+                autoBind: true, // 禁止自动渲染数据
+                sortable: false,
+                columnMenu: false,
+                editable: false,
+                scrollable: false,
+                pageable: { input: true, numeric: true, refresh: true, pageSizes: [10, 20, 30, 50, 100], pageSize: 15 },
+                columns: [
+                    { field: "name", title: "名称" },
+                    { field: "ipAddress", title: "地址" },
+                    { field: "port", title: "端口" },
+                    { field: "password", title: "密码" },
+                    {
+                        field: "id", title: "操作", width: 80, template: function (model) {
+                            return `<button type="button" class="btn btn-danger btn-flat btn-sm" onclick="doDelete(${model.id})"><i class="fa fa-trash"></i>删除</button>`;
+                        }
+                    }
+                ]
+            });
+        })
+
+        function doDelete(id) {
+            $.post("/home/delete?id=" + id, function (res) {
+                if (res.code == 0) {
+                    $.cookie("database", null, { path: "/", expires: -1});
+                    parent.location.reload();
+                }
+            });
+        }
+    </script>
+
+}

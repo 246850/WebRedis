@@ -10,6 +10,8 @@ namespace WebRedis.Infrastructure
     {
         public static IConnectionMultiplexer GetConnectionMultiplexer(this HttpContext context)
         {
+            if (context.Items[ConstantKey.RedisConnectionKey] == null) return null;
+
             if (context.Items[ConstantKey.RedisConnectionKey] is IConnectionMultiplexer connection) return connection;
 
             throw new Exception("Redis连接异常");

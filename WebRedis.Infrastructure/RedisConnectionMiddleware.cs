@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebRedis.Domain;
 
 namespace WebRedis.Infrastructure
 {
@@ -18,9 +21,27 @@ namespace WebRedis.Infrastructure
 
         public async Task Invoke(HttpContext context)
         {
+            var dbContext = (WebredisContext)context.RequestServices.GetService(typeof(WebredisContext));
+            string database = context.Request.Cookies["database"];
+
             // 执行前 设置 Redis 连接
-            IConnectionMultiplexer connection = ConnectionMultiplexer.Connect("101.132.140.8:6379");
-            context.Items[ConstantKey.RedisConnectionKey] = connection;
+            IConnectionMultiplexer connection = null;
+            if (!string.IsNullOrWhiteSpace(database))
+            {
+                var entity = dbContext.ConnectionConfig.Find(Convert.ToInt32(database));
+                if (entity != null)
+                {
+                    string connectionString = $"{entity.IpAddress}:{entity.Port}";
+                    if (!string.IsNullOrWhiteSpace(entity.Password))
+                    {
+                        connectionString += $",password={entity.Password}";
+                    }
+                    connection = ConnectionMultiplexer.Connect(connectionString);
+                    context.Items[ConstantKey.RedisConnectionKey] = connection;
+                }
+            }
+
+            
             try
             {
                 await _next.Invoke(context);
@@ -32,7 +53,7 @@ namespace WebRedis.Infrastructure
             finally
             {
                 // 执行后释放 Redis 连接
-                connection.Dispose();
+                connection?.Dispose();
             }
 
         }
