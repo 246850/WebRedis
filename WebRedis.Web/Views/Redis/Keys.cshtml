@@ -13,7 +13,6 @@
 </style>
 <ul class="nav nav-tabs" role="tablist" id="tabs">
     <li role="presentation" class="active"><a href="#keys" role="tab" data-toggle="tab"><i class="fa fa-key text-green"></i>键管理</a></li>
-    <li role="presentation"><a href="#database_manager" role="tab" data-toggle="tab"><i class="fa fa-database text-green"></i>库管理</a></li>
     <li role="presentation"><a href="#terminal" role="tab" data-toggle="tab"><i class="fa fa-terminal text-green"></i>终端</a></li>
 </ul>
 <div class="tab-content" style="padding-top:1px" id="tab_content">
@@ -34,9 +33,6 @@
             <div class="col-md-7" id="operator"></div>
         </div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="database_manager">
-        ddd
-    </div>
     <div role="tabpanel" class="tab-pane" id="terminal">
     </div>
 </div>
@@ -55,7 +51,6 @@
     function doQuery() {
         $("#grid_0").data("kendoGrid").dataSource.read();
     }
-
     /**resize**/
     function doResize() {
         try {

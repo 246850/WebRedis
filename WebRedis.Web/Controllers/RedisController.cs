@@ -112,11 +112,11 @@ namespace WebRedis.Web.Controllers
         /// 过期时间
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpPost]
         public async Task Expire(int database, string key, int value = -1)
         {
             IDatabase db = _connection.GetDatabase(database);
-            if (value <= 0)
+            if (value == -1)
             {
                 await db.KeyExpireAsync(key, (TimeSpan?)null);
             }
@@ -163,11 +163,11 @@ namespace WebRedis.Web.Controllers
         /// String类型 写
         /// </summary>
         /// <returns></returns>
-        [HttpGet]
+        [HttpPost]
         public async Task StringSet(int database, string key, string value)
         {
             IDatabase db = _connection.GetDatabase(database);
-            await db.StringSetAsync(key, value);
+            await db.StringSetAsync(key, value, db.KeyTimeToLive(key));
         }
 
         /// <summary>

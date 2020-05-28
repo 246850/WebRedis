@@ -31,7 +31,7 @@
                     <div class="input-group">
                         <input type="number" class="form-control" asp-for="TTL" required>
                         <span class="input-group-btn">
-                            <button type="submit" class="btn btn-warning btn-flat" data-toggle="tooltip" title="-1:不过期"><i class="fa fa-clock-o"></i>设置有效期</button>
+                            <button type="submit" class="btn btn-warning btn-flat" data-toggle="tooltip" title="-1:不过期" onclick="doExpire()"><i class="fa fa-clock-o"></i>设置有效期</button>
                         </span>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="box-footer">
-        <button type="button" class="btn btn-success btn-flat btn-sm"><i class="fa fa-check"></i>保存</button>
+        <button type="button" class="btn btn-success btn-flat btn-sm" onclick="doSave()"><i class="fa fa-check"></i>保存</button>
     </div>
 </div>
 
@@ -71,9 +71,29 @@
             doQuery();
         });
     }
+    function doExpire() {
+        if (loading) return false;
+        loading = true;
+
+        $.post("/redis/expire", { database:@Model.Database, key: encodeURIComponent($("#old_key").val()), value:$("#@Html.IdFor(model=> model.TTL)").val() }, function (res) {
+            parent.$.alert("成功");
+            loading = false;
+            doQuery();
+        });
+    }
+    function doSave() {
+        if (loading) return false;
+        loading = true;
+
+        $.post("/redis/stringset", { database:@Model.Database, key: encodeURIComponent($("#old_key").val()), value:editor.getValue() }, function (res) {
+            parent.$.alert("成功");
+            loading = false;
+        });
+    }
+    var editor = null;
     $(function () {
         /**值格式化**/
-        var editor = CodeMirror.fromTextArea(document.getElementById("@Html.IdFor(model=> model.Data)"), {
+        editor= CodeMirror.fromTextArea(document.getElementById("@Html.IdFor(model=> model.Data)"), {
             mode: "application/json",
             theme: 'eclipse',
             styleActiveLine: true, // 当前行背景高亮
