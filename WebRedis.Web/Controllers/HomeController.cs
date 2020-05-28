@@ -49,7 +49,7 @@ namespace WebRedis.Web.Controllers
                 Name = model.Name.Trim(),
                 IpAddress = model.IpAddress.Trim(),
                 Port = model.Port,
-                Password = model.Password.Trim(),
+                Password = model.Password,
                 Description = model.Description,
                 CreateTime = DateTime.Now
             });
